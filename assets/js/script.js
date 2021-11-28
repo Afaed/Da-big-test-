@@ -1,7 +1,9 @@
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
-var quizstart = document.getElementById('quizstart')
-var myQuestions =  
+var quizstart = document.getElementById('quizstart');
+var actionContainerEL = document.createElement ("div");
+var currentQuestionIndex = 0;
+var question = 
 quizstart.InnerHtml = function quizstart() {
     function myquestion() {
         const myQuestions = [
@@ -26,7 +28,7 @@ quizstart.InnerHtml = function quizstart() {
                 d: "All of the above",
             },
             correctAnswer: "d",
-        }
+        },
     ]}}
 
     function buildQuiz() {
@@ -39,7 +41,7 @@ quizstart.InnerHtml = function quizstart() {
             })
         }
     
-function countdown() {
+get.ElementbyId = function countdown() {
     var timeLeft = 5 ;
   
     // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
@@ -64,4 +66,4 @@ quizstart (
 )
 //event listeners
 
-quizstart.addeventListener('click', showResults)
+quizstart.addeventListener('click', quizstart.InnerHtml)

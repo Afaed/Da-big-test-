@@ -1,7 +1,7 @@
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
 var quizstart = document.getElementById('quizstart')
-
+var myQuestions =  
 quizstart.InnerHtml = function quizstart() {
     function myquestion() {
         const myQuestions = [
@@ -20,22 +20,24 @@ quizstart.InnerHtml = function quizstart() {
             Questionnumber: 2,
             question: "What is an array?",
             answers: {
-                a: "It containsnumberz",
+                a: "It contains numberz",
                 b: "It stores data",
                 c: "It contains values",
                 d: "All of the above",
             },
             correctAnswer: "d",
         }
-    ]}
-        function buildQuiz() {
-        const output= []
+    ]}}
+
+    function buildQuiz() {
+        const output= [],
         myquestion(
             (currentQuesiton, QuestionNumber) => {
+                currentQuesiton = [function quizstart(){myQuestions}]
                 const answers = [];
                 for(letter in myQuestions.answers){}
             })
-        }} 
+        }
     
 function countdown() {
     var timeLeft = 5 ;
@@ -50,16 +52,16 @@ function countdown() {
         timerEl.textContent = timeLeft;
         timeLeft--;
         }
-    }, 10); //Function that tells the pc how fast make sure you clear the interval first. as shown above
+    }, 1000); //Function that tells the pc how fast make sure you clear the interval first. as shown above
     }
 
-function showResults() {};
-countdown()
-quizstart(
-    myQuestions (),
+function showResults() {
 
-);
-
+}
+quizstart (
+    myQuestions(),
+    countdown(),
+)
 //event listeners
 
-submitButton.addeventListener('click', showResults)
+quizstart.addeventListener('click', showResults)

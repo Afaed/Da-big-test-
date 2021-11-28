@@ -44,7 +44,7 @@
         border-radius: 5px;  
       }
       
-    .answer {
+    .answers {
       font-family: sans-serif;
       text-decoration-color: white;
       font-size: 15px;
@@ -55,9 +55,6 @@
       border-radius: 25px; 
 
     }
-       .btn2{
-         margin-left: 85px
-       }
       
       #button:hover {
         color: white;

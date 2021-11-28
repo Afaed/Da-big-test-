@@ -24,19 +24,18 @@ quizstart.InnerHtml = function quizstart() {
                 b: "It stores data",
                 c: "It contains values",
                 d: "All of the above",
-
             },
-            correctAnswer: "d"
-        }],
+            correctAnswer: "d",
+        }
+    ]}
         function buildQuiz() {
-        const output= [
-        myquestion.forEach(
+        const output= []
+        myquestion(
             (currentQuesiton, QuestionNumber) => {
                 const answers = [];
                 for(letter in myQuestions.answers){}
-            }, ],
-        }
-    }
+            })
+        }} 
     
 function countdown() {
     var timeLeft = 5 ;
@@ -53,7 +52,7 @@ function countdown() {
         }
     }, 10); //Function that tells the pc how fast make sure you clear the interval first. as shown above
     }
-}
+
 function showResults() {};
 countdown()
 quizstart(

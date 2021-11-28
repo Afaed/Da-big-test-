@@ -1,20 +1,23 @@
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
-quizstart = document.getElementById('quizstart')
+var quizstart = document.getElementById('quizstart')
 
 quizstart.InnerHtml = function quizstart() {
     function myquestion() {
         const myQuestions = [
         {
+          Questionumber: 1, 
           question: "Who invented JavaScript?",
           answers: {
             a: "Douglas Crockford",
             b: "Sheryl Sandberg",
-            c: "Brendan Eich"
+            c: "Brendan Eich",
+            d: "Joe Ket",
           },
           correctAnswer: "c"
         },
         {
+            Questionnumber: 2,
             question: "What is an array?",
             answers: {
                 a: "It containsnumberz",
@@ -24,14 +27,14 @@ quizstart.InnerHtml = function quizstart() {
 
             },
             correctAnswer: "d"
-        }]
+        }],
         function buildQuiz() {
-        const output= [];
+        const output= [
         myquestion.forEach(
             (currentQuesiton, QuestionNumber) => {
                 const answers = [];
                 for(letter in myQuestions.answers){}
-            }
+            }, ],
         }
     }
     

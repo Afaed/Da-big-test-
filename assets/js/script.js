@@ -4,13 +4,24 @@ var quiz = document.getElementById('quizstart');
 var actionContainerEL = document.createElement ("div");
 var currentQuestionIndex = 0;
 var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
-function Quiz(Questions) {
-    this.score = 0;
-    this.questions = Questions;
-    this.questionIndex = 0
-}
-
+let quizsstart = document.getElementById("quiz") ;
 var myQuestions = [
+    {
+        question: "Who invented JavaScript?", 
+        a: "Douglas Crockford", 
+        b: "Sheryl Sandberg", 
+        c: "Brendan Eich", 
+        d: "Joe Ket",
+        answer: "D"
+    },
+    {
+        question: "Who invented JavaScript?", 
+        a: "It contains numberz",
+        b: "It stores data",
+        c: "It contains values",
+        d: "All of the above",
+        answer: "D",
+    },
     {
         question: "Who invented JavaScript?", 
         a: "Douglas Crockford", 
@@ -26,6 +37,48 @@ var myQuestions = [
         c: "Brendan Eich", 
         d: "Joe Ket",
         answer: "D"
+    },
+    {
+        question: "Who invented JavaScript?", 
+        a: "Douglas Crockford", 
+        b: "Sheryl Sandberg", 
+        c: "Brendan Eich", 
+        d: "Joe Ket",
+        answer: "D"
+    },
+        ];
+quizStart.innerHtml = function quizStart(){
+    var myquestion
+    
+    function get () {
+    return document.getElementById(quizstart)
+}
+}
+
+function Quiz(Questions) {
+    this.score = 0;
+    this.questions = Questions;
+    this.questionIndex = 0
+}
+
+function quizStart(){
+    
+    var myQuestions = [
+    {
+        question: "Who invented JavaScript?", 
+        a: "Douglas Crockford", 
+        b: "Sheryl Sandberg", 
+        c: "Brendan Eich", 
+        d: "Joe Ket",
+        answer: "D"
+    },
+    {
+        question: "Who invented JavaScript?", 
+        a: "It contains numberz",
+        b: "It stores data",
+        c: "It contains values",
+        d: "All of the above",
+        answer: "D",
     },
     {
         question: "Who invented JavaScript?", 
@@ -53,7 +106,7 @@ var myQuestions = [
     },
         ]
     function get () {
-    return document.getElementById(quizstart)
+    return document.getElementById(quizstart)}
 }
 
 function renderQuestion(){
@@ -115,5 +168,5 @@ function showScores() {
 };
 
 //event listeners
-quizsstart.addEventListner("click", Quiz)
+quizstart.onclick = Quiz;
 localStorage.getItem("Initials")
